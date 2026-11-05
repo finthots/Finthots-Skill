@@ -4,7 +4,7 @@ The deliverable is an **.xlsx**, not a document. A tracker is something people f
 and type into.
 
 Tabs, in this order: **READ_ME**, **TRACKER**, **MESSAGES**, **COMPANY_PLAN**,
-**CREDIT_REPORT**.
+**CREDIT_REPORT**, **PATTERN_QUEUE**, **VERIFY_QUEUE**.
 
 ## TRACKER — the sheet people actually work in
 
@@ -51,6 +51,25 @@ what the credits bought, and what the plan refused. Then: where enrichment stopp
 balance ran out, and the queue to resume from.
 
 List the free sources used alongside, with URLs, so the next run knows what cost nothing.
+
+## PATTERN_QUEUE
+
+One domain per line, for companies where fewer than two confirmed addresses exist so the
+email pattern cannot yet be derived safely. The user runs Hunter.io Domain Search on each
+(~50 free credits a month) and returns the pattern. Columns: Company | Domain |
+Confirmed_addresses_held | Pattern_found.
+
+## VERIFY_QUEUE
+
+**Plain one address per line, no headers, no other columns.** This is the format every bulk
+verifier accepts as a paste — GetProspect (~50 emails + 100 verifications free monthly),
+ZeroBounce or BounceZero (~100 on signup). Everything in `Pattern_email_UNVERIFIED` goes
+here.
+
+The user runs the tool, exports the CSV and attaches it. Merge the results back: a verified
+address is promoted into `Email` with `Email_status = verified (<tool>)`; anything rejected
+or inconclusive stays out of `Email` and the row is marked. Never promote an unverified
+address.
 
 ## READ_ME
 

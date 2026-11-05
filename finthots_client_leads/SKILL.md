@@ -112,6 +112,29 @@ This is where the money is saved. Searching is cheap; revealing is not.
 Reveal order when credits are short: named L&D heads → CHRO at Tier 1-2 companies with no
 L&D contact → MD/CBO at Tier 3 only. Never reveal a mobile for a large-company CEO.
 
+### The free stack — use it before paid reveals
+
+Hunter.io (~50/mo, best for **confirming a company's email pattern**), GetProspect (~50
+emails + 100 verifications, the largest free verification allowance), ZeroBounce/BounceZero
+(~100 on signup), Snov.io (~50), Prospeo and Skrapp (~50-75 each). Stacked and renewing
+monthly, this exceeds any single paid tool's free tier.
+
+**None of these are MCP connectors** — checked against the registry, no integration exists.
+They are browser tools, so the workflow is a handoff. Build two extra tabs:
+
+- **PATTERN_QUEUE** — one domain per line, for companies with fewer than two confirmed
+  addresses. The user runs Hunter Domain Search and returns the pattern.
+- **VERIFY_QUEUE** — plain one address per line, no headers. Everything in
+  `Pattern_email_UNVERIFIED` goes here, ready to paste into any bulk verifier.
+
+The user runs the tool and attaches the CSV; the skill merges results, promoting only
+verified addresses into the `Email` column.
+
+**Order matters:** Hunter domain search *first* to confirm the pattern, *then* derive, *then*
+bulk verify, *then* promote. Verified live: deriving without a confirmed pattern produced
+wrong addresses at three companies — a numbered alias, a group domain, and a different
+registered domain. A Hunter domain search would have caught all three for one credit each.
+
 ## Step 7 — Treat every revealed record as a correction, not just an addition
 
 Reveals carry the current employer. **Check it against the target company every time.**

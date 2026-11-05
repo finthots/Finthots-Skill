@@ -97,12 +97,57 @@ microfinance; NABARD-linked lists for agri.
 account can show lookup credits remaining while `person_search` is already 50/50 used for the
 month. Check both.
 
-## Other free monthly tiers worth stacking
+## The free stack — renewing monthly, and bigger than any single paid tier
 
-Hunter.io ~50 credits (best for confirming a company's email pattern), Snov.io ~50,
-GetProspect ~50 emails + 100 verifications, Prospeo and Skrapp ~50–75 each,
-ZeroBounce/BounceZero ~100 on signup for verification. Stacked and renewing monthly, these
-exceed a single paid tool's free allowance.
+**None of these are MCP connectors.** Checked against the connector registry: Hunter, Snov,
+GetProspect, Prospeo, Skrapp and ZeroBounce have no integration. They are browser tools, and
+the way to use them is a deliberate handoff, not an API call. Do not promise to "connect"
+them.
+
+| Tool | Free per month | The job it is best at |
+|---|---|---|
+| **Hunter.io** | ~50 credits | **Confirming a company's email pattern.** One Domain Search returns the pattern plus sample addresses — this is what makes derivation safe |
+| **GetProspect** | ~50 emails + 100 verifications | **Bulk verification** — the largest free verification allowance of the set |
+| **ZeroBounce / BounceZero** | ~100 on signup | Final deliverability check before a send |
+| Snov.io | ~50 credits | Second-pass finding on misses; bulk upload of name + domain |
+| Prospeo | ~50–75 | Topping up finds |
+| Skrapp | ~50–75 | Chrome extension, finds from a profile page |
+| Reoon | varies | Alternative verifier when others are exhausted |
+
+Stacked, roughly 150–250 finds plus 200 verifications a month, **renewing** — more than any
+single paid tool's free tier, and it covers precisely the gap that paid credits are usually
+wasted on.
+
+### The handoff — what the skill produces and what the user runs
+
+The skill cannot call these tools. It can prepare their input and consume their output, which
+is most of the work. Build two extra tabs in the workbook:
+
+**PATTERN_QUEUE** — one domain per line, for companies where fewer than two confirmed
+addresses exist, so the pattern cannot yet be derived safely. The user runs Hunter Domain
+Search on each and returns the pattern.
+
+**VERIFY_QUEUE** — plain one address per line, no headers, no other columns. This is the
+format every bulk verifier accepts as a paste. Everything in the
+`Pattern_email_UNVERIFIED` column goes here.
+
+The user runs the free tool, exports the CSV, and attaches it. The skill then merges: a
+verified address is promoted into the `Email` column with `Email_status = verified
+(<tool>)`; anything rejected or inconclusive stays out and the row is marked.
+
+### Order of operations
+
+1. **Hunter Domain Search** on every company with fewer than two confirmed addresses — this
+   gives the pattern, and the pattern is what makes derivation legitimate rather than guessing.
+2. **Derive** addresses only for companies whose pattern is now confirmed.
+3. **Bulk verify** the derived set through GetProspect or ZeroBounce.
+4. **Promote only verified addresses** into the Email column. Never the unverified ones.
+5. **Snov / Prospeo / Skrapp** for whoever is still unfound.
+
+Doing step 1 before step 2 is the whole point. Verified live: pattern derivation without a
+confirmed pattern produced wrong addresses at three companies — a numbered alias, a group
+domain, and an entirely different registered domain. A Hunter domain search would have caught
+all three for one credit each.
 
 ## India-specific notes
 
