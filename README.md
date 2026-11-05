@@ -7,9 +7,15 @@ Each folder is a self-contained skill: a `SKILL.md` with YAML frontmatter (`name
 
 ## Skills
 
-| Skill | What it does |
-|---|---|
-| [`finthots_client_leads`](./finthots_client_leads/) | Builds and enriches outbound B2B lead lists for BFSI training sales. Harvests free regulator sources first, audits provider credits and plan entitlements before spending, maps the full buying committee, and sequences outreach L&D → credit → compliance. |
+| Skill | Stage | What it does |
+|---|---|---|
+| [`finthots_client_leads`](./finthots_client_leads/) | Find the buyer | Builds and enriches outbound B2B lead lists for BFSI training sales. Harvests free regulator sources first, audits provider credits and plan entitlements before spending, maps the full buying committee, and sequences outreach L&D → credit → compliance. |
+| [`finthots_sales_collateral`](./finthots_sales_collateral/) | Pitch them | Decides the pitch angle for a given buyer and builds the client-facing assets — case studies, capability decks, workshop menus, demo reel scripts, skill assessments, cost models. Thirteen angles with proof status; no invented outcome numbers. |
+
+The two are a pipeline: `finthots_client_leads` finds the buyer and writes the per-contact
+message, `finthots_sales_collateral` builds the reusable assets that message points at. The
+collateral is segment-agnostic — the same case study serves housing finance, vehicle finance
+and microfinance, so it is built once and not rebuilt per campaign.
 
 ## Installing
 
@@ -29,6 +35,14 @@ git clone https://github.com/finthots/finthots-skill.git
 - No credentials, API keys or customer contact data in this repo.
 
 ## Changelog
+
+**2026-11-05** — Added `finthots_sales_collateral`: thirteen pitch angles (six from Manish,
+seven added) each carrying a READY / NOT YET proof status, the angle-by-buyer mapping, specs
+for eight client-facing assets, the seven-step CTA ladder, and the documented proof points in
+`references/proof.md`. Built as a separate skill rather than merged into the lead-gen skill
+because the triggers and outputs differ and the assets serve every segment, not one campaign.
+The governing rule: never invent an outcome number — "made mandatory for every new joiner"
+beats a fabricated percentage and cannot be challenged.
 
 **2026-11-05** — Rewritten after a live 49-company run. Added `references/data-sources.md`
 (free regulator sources, real per-action credit costs, verified plan entitlements) and
