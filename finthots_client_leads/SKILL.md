@@ -112,6 +112,12 @@ This is where the money is saved. Searching is cheap; revealing is not.
 Reveal order when credits are short: named L&D heads → CHRO at Tier 1-2 companies with no
 L&D contact → MD/CBO at Tier 3 only. Never reveal a mobile for a large-company CEO.
 
+**Decide the waterfall from what Step 2 actually returned, and do not assume mobiles must be
+bought while emails are derived.** That was the original plan and it was wrong: the regulator
+directory supplied 38 direct mobiles free, while mid-management emails turned out to be the
+genuinely scarce field. The cheap and expensive fields swap by segment and by source, so
+re-derive the order every run instead of inheriting it.
+
 ### The free stack — use it before paid reveals
 
 Hunter.io (~50/mo, best for **confirming a company's email pattern**), GetProspect (~50

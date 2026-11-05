@@ -3,7 +3,7 @@
 The deliverable is an **.xlsx**, not a document. A tracker is something people filter, sort
 and type into.
 
-Tabs, in this order: **READ_ME**, **TRACKER**, **MESSAGES**, **COMPANY_PLAN**,
+Tabs, in this order: **READ_ME**, **TRACKER**, **MESSAGES**, **COMPANY_PLAN**, **ISSUES**,
 **CREDIT_REPORT**, **PATTERN_QUEUE**, **VERIFY_QUEUE**.
 
 ## TRACKER — the sheet people actually work in
@@ -43,6 +43,28 @@ Rank | Company | Tier | AUM_Cr | Client | Contacts | Touch_1 | Touch_2 | Touch_3
 Has_Credit | Has_Compliance | Verified_contact | Note
 
 Shade the Has_* cells red where N — that is the research backlog at a glance.
+
+## ISSUES — the QA tab, and the one most often skipped
+
+Company | Name | Issue_Type | Detail
+
+Run every one of these checks and write a row for each hit. An empty ISSUES tab means the
+checks were not run, not that the data is clean — say which checks passed.
+
+- **Employer mismatch** — a revealed current employer that is not the target company. The
+  highest-value check; it caught two departed L&D heads in a live run.
+- **Domain mismatch** — an email domain that is neither the company's nor a known group
+  domain. Caught three wrong derived addresses live.
+- **Person–source mismatch** — the source URL does not name the person on that row.
+- **Thin coverage** — fewer than two usable contacts at a company.
+- **Duplicate person** — the same individual appearing at two companies, or surviving a merge
+  twice.
+- **Persona mix failure** — L&D under 25% of rows, or Credit and Compliance near zero. The
+  list came off leadership-team pages, which only list CXOs.
+- **Corporate status** — insolvency, resolution, administrator control, rebrand, acquisition.
+- **Sequence violation** — a Tier 1 or 2 company whose touch 1 is its CEO.
+- **Grade misread** — "Chief Manager" or "Deputy Chief" sorted as C-suite. They are Indian
+  banking grades, not CXO titles.
 
 ## CREDIT_REPORT
 
