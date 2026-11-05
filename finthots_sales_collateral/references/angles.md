@@ -1,7 +1,10 @@
-# The thirteen pitch angles
+# The fourteen pitch angles
 
-Six came from Manish; seven were added. Each carries a readiness status. **Do not use an
+Seven came from Manish; seven were added. Each carries a readiness status. **Do not use an
 angle marked NOT YET** — the proof does not exist, and the claim will be challenged.
+
+**Angle 14, the pain-point scenario, is the default cold opener** where there is no referral
+and no prior relationship. Its twelve ready-made scenarios are in `references/scenarios.md`.
 
 ---
 
@@ -156,18 +159,40 @@ Diagnostic credibility beats any claim about yourself. Saying their problem back
 accurately, before asking for anything, separates FinThots from every other training vendor
 in their inbox.
 
+## 14. Pain-point scenario — tell them their own Tuesday — READY, and the best cold opener here
+
+*"Here is a specific thing that happens in your business, here is where it costs you, and here
+is the module we already built for it."*
+
+**Buyer:** all of them, with a different scenario each.
+**Proof held:** twelve scenarios in `references/scenarios.md`, every one mapped to content
+FinThots has already built — property visit, informal income, mortgage credit policy,
+collections conduct, KYC-AML, fraud risk, induction, POSH, nine languages.
+**Proof missing:** nothing. This is sendable today.
+
+Angle 13 is a one-line diagnostic; this is the full four-beat story with the fix attached:
+scene → cost → what changes → a small ask. It works because it inverts the usual order — the
+reader's problem first, FinThots second, the ask last.
+
+**The discipline that keeps it safe:** use only the twelve scenarios, never improvise a new one
+in a live conversation, and never put a number on what it costs them. A scene that is slightly
+wrong proves the sender has never done the job, which is the exact opposite of the point.
+
 ---
 
 # Angle by buyer
 
-| Buyer | Lead angle | Supporting | Avoid | What they actually buy |
-|---|---|---|---|---|
-| **L&D head** | 4 — We measure | 3 Habits · 9 Speed · 11 Credibility | 2 Cost | Library + measurement + production quality |
-| **Credit / business** | 13 — Know your problem | 10 Languages · 6 Workshops | 2 Cost, 3 Habits | Functional pain, ex-banker credibility, a workshop they can say yes to |
-| **Compliance** | 8 — Obligation | 11 RBI · 4 Audit trail | Everything else | Completion dashboard, NHB evidence trail, accepted standard |
-| **HR / gate** | 12 — Attrition economics | 3 Habits · 9 Speed · 4 Measurement | 13 Diagnostic | Induction, time-to-productivity, mass hire-and-train |
-| **Executive, Tier 3** | 12 — Attrition economics | 7 Pilot · 9 Speed · 2 Cost | Long narratives | Money, speed, a pilot that de-risks the call |
-| **Nodal / grievance** | None — referral ask | 13 framed as a question | Any pitch | Their read on root causes, and a name |
-| **Existing client** | 6 — Workshops | 4 Measurement · 5 Their own case study | 11 Credibility | Expansion, refresh, an honest read on what worked |
+| Buyer | Cold opener | Then lead with | Supporting | Avoid | What they actually buy |
+|---|---|---|---|---|---|
+| **L&D head** | **14** — scenario 9, 10 or 11 | 4 — We measure | 3 Habits · 9 Speed · 11 Credibility | 2 Cost | Library + measurement + production quality |
+| **Credit / business** | **14** — scenario 1, 2 or 3 | 13 — Know your problem | 10 Languages · 6 Workshops | 2 Cost, 3 Habits | Functional pain, ex-banker credibility, a workshop they can say yes to |
+| **Compliance** | **14** — scenario 7 or 12 | 8 — Obligation | 11 RBI · 4 Audit trail | Everything else | Completion dashboard, NHB evidence trail, accepted standard |
+| **HR / gate** | **14** — scenario 5 | 12 — Attrition economics | 3 Habits · 9 Speed · 4 Measurement | 13 Diagnostic | Induction, time-to-productivity, mass hire-and-train |
+| **Executive, Tier 3** | **14** — scenario 3 or 5 | 7 Pilot, then 12 Attrition | 9 Speed · 2 Cost | Long narratives | Money, speed, a pilot that de-risks the call |
+| **Nodal / grievance** | **14** — scenario 6, *as a question* | None — referral ask | 13 framed as a question | Any pitch | Their read on root causes, and a name |
+| **Existing client** | **14** — scenario 8 or 11 | 6 — Workshops | 4 Measurement · 5 Their own case study | 11 Credibility | Expansion, refresh, an honest read on what worked |
+
+The cold opener column is the first message. The lead angle is what carries the conversation
+once they have replied. Scenario numbers are from `references/scenarios.md`.
 
 **One angle per asset.** An asset that argues five things argues none.

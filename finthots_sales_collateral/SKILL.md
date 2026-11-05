@@ -28,21 +28,29 @@ capability, and delivering it is what produces the number for the next prospect.
 
 ## Step 1 — Pick the angle before writing anything
 
-Thirteen angles, their claims, proof status and cautions are in `references/angles.md`.
-The persona mapping is in the same file. In short:
+Fourteen angles, their claims, proof status and cautions are in `references/angles.md`.
 
-| Buyer | Lead with | Never lead with |
-|---|---|---|
-| L&D head | **We measure the improvement** | Price |
-| Credit / risk / business head | **We already know your problem** | Price, LMS convenience |
-| Compliance officer | **Regulatory obligation, not preference** | Anything about improvement |
-| HR head | **Attrition economics** | The credit diagnostic |
-| Executive at a small lender | **Attrition economics**, then a pilot | Long capability narratives |
-| Nodal / grievance officer | Nothing — this is a referral ask | Any pitch at all |
-| Existing or past client | **Workshops**, and an honest review of earlier work | Credibility lines they already know |
+**For any cold first contact, angle 14 — the pain-point scenario — is the default.** Open with
+something that happens in the reader's own business, say where it costs them, and name the
+module already built for it. Twelve ready-made scenarios, each mapped to real FinThots
+content, with the cold line written out, are in `references/scenarios.md`. Never improvise a
+new scenario in a live conversation and never put a number on what it costs them — a scene
+that is slightly wrong proves the sender has never done the job.
 
-Three angles are ready and underused: **nine Indian languages produced in-house** (a genuine
-moat for rural and affordable lenders), **fits existing habits** (mobile, between field
+| Buyer | Cold opener — scenario # | Then lead with | Never lead with |
+|---|---|---|---|
+| L&D head | 9, 10 or 11 | **We measure the improvement** | Price |
+| Credit / risk / business head | 1, 2 or 3 | **We already know your problem** | Price, LMS convenience |
+| Technical & legal | 4 or 1 | The functional diagnostic | Anything about L&D process |
+| Collections head | 6 | **Workshops**, conduct simulations | Price |
+| Compliance officer | 7 or 12 | **Regulatory obligation, not preference** | Anything about improvement |
+| HR head | 5 | **Attrition economics** | The credit diagnostic |
+| Executive at a small lender | 3 or 5 | **A pilot**, then attrition economics | Long capability narratives |
+| Nodal / grievance officer | 6, *as a question* | Nothing — this is a referral ask | Any pitch at all |
+| Existing or past client | 8 or 11 | **Workshops**, and an honest review of earlier work | Credibility lines they know |
+
+Three other angles are ready and underused: **nine Indian languages produced in-house** (a
+genuine moat for rural and affordable lenders), **fits existing habits** (mobile, between field
 visits, in their own language), and **the RBI credential** (a regulator accepted the
 production standard, which is what makes any first message get read).
 
@@ -126,6 +134,6 @@ Price enters at the proposal, never before.
 3. Never lead with price. It anchors FinThots as the cheap option and buyers who arrive on
    price leave on price.
 4. Never put Sunyukth Newwave LLP in client-facing material.
-5. Pick one angle per asset. An asset that argues five things argues none.
+5. Pick one angle per asset, and one scenario per message. An asset that argues five things argues none.
 6. Deliver editable files unless told otherwise.
 7. Check whether the prospect's group is already a client before writing a cold line.
