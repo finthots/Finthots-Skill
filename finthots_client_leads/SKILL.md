@@ -119,16 +119,23 @@ emails + 100 verifications, the largest free verification allowance), ZeroBounce
 (~100 on signup), Snov.io (~50), Prospeo and Skrapp (~50-75 each). Stacked and renewing
 monthly, this exceeds any single paid tool's free tier.
 
-**None of these are MCP connectors** — checked against the registry, no integration exists.
-They are browser tools, so the workflow is a handoff. Build two extra tabs:
+**Check for plugins before assuming a handoff.** These are not in the *connector* registry,
+but several are published as **plugins** with their own MCP servers — search the plugin
+catalogue, not just connectors. Verified available: **Hunter** (partner-published, with
+`domain-search`, `email-finder`, `email-verifier` and `check-usage` skills),
+**ClearBounce** (`verify_email`, `verify_bulk`, `find_email`, `check_credits`) and
+**FullEnrich** (waterfall across 25+ providers). A plugin turns the handoff below into a
+direct call — always look first.
+
+Where no plugin is installed, fall back to the handoff. Build two extra tabs:
 
 - **PATTERN_QUEUE** — one domain per line, for companies with fewer than two confirmed
-  addresses. The user runs Hunter Domain Search and returns the pattern.
+  addresses. Hunter Domain Search returns the pattern, by plugin or by browser.
 - **VERIFY_QUEUE** — plain one address per line, no headers. Everything in
   `Pattern_email_UNVERIFIED` goes here, ready to paste into any bulk verifier.
 
-The user runs the tool and attaches the CSV; the skill merges results, promoting only
-verified addresses into the `Email` column.
+With a plugin, run these directly. Without one, the user runs the tool and attaches the CSV;
+either way the skill merges results, promoting only verified addresses into `Email`.
 
 **Order matters:** Hunter domain search *first* to confirm the pattern, *then* derive, *then*
 bulk verify, *then* promote. Verified live: deriving without a confirmed pattern produced

@@ -99,10 +99,21 @@ month. Check both.
 
 ## The free stack — renewing monthly, and bigger than any single paid tier
 
-**None of these are MCP connectors.** Checked against the connector registry: Hunter, Snov,
-GetProspect, Prospeo, Skrapp and ZeroBounce have no integration. They are browser tools, and
-the way to use them is a deliberate handoff, not an API call. Do not promise to "connect"
-them.
+**Search the plugin catalogue before assuming these are browser-only.** They are absent from
+the *connector* registry, which is a different catalogue from *plugins*. Verified available as
+plugins, each shipping its own MCP server:
+
+- **Hunter** — partner-published by Hunter.io. Skills: `domain-search` (confirms a company's
+  email pattern), `email-finder`, `email-verifier`, `person-enrichment`, `check-usage`. This
+  is the single most useful install for this work.
+- **ClearBounce Email Verification** — `verify_email`, `verify_bulk`, `check_bulk_status`,
+  `get_bulk_results`, `find_email`, `check_credits`. Bulk verification as a direct call.
+- **FullEnrich** — waterfall enrichment across 25+ providers, with CSV export.
+- **VibeLeads**, **DataKart**, **GIA Prospecting Engine** — further prospecting options.
+
+Installing a plugin turns the handoff below into a direct tool call. Check first; fall back to
+the handoff only when nothing is installed. Snov, GetProspect, Prospeo and Skrapp remain
+browser-only at the time of writing.
 
 | Tool | Free per month | The job it is best at |
 |---|---|---|
@@ -118,10 +129,10 @@ Stacked, roughly 150–250 finds plus 200 verifications a month, **renewing** �
 single paid tool's free tier, and it covers precisely the gap that paid credits are usually
 wasted on.
 
-### The handoff — what the skill produces and what the user runs
+### The handoff — when no plugin is installed
 
-The skill cannot call these tools. It can prepare their input and consume their output, which
-is most of the work. Build two extra tabs in the workbook:
+With Hunter or ClearBounce installed, call them directly and skip this. Without them, prepare
+the input and consume the output, which is most of the work anyway. Build two extra tabs:
 
 **PATTERN_QUEUE** — one domain per line, for companies where fewer than two confirmed
 addresses exist, so the pattern cannot yet be derived safely. The user runs Hunter Domain
