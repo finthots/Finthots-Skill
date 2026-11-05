@@ -173,6 +173,13 @@ with its CEO** — assert this and verify it before shipping.
 
 Message guidance and the real FinThots proof points to use are in `references/messaging.md`.
 
+**The angle comes from `finthots_sales_collateral`, not from here.** That skill holds the
+thirteen pitch angles with their proof status, the angle-by-buyer mapping and the CTA ladder.
+Use it to pick the angle per persona before writing the MESSAGES tab, and never write a claim
+it marks NOT YET — above all a before/after conversion percentage, which no FinThots
+engagement has ever measured. Lead L&D with *we measure what changed*, credit with *we
+already know your problem*, compliance with *obligation, not preference*.
+
 ## Hard rules
 
 1. Exhaust the free regulator and filing sources before spending a credit.
